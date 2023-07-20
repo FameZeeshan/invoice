@@ -1,0 +1,63 @@
+body {
+  padding: 20px;
+}
+
+.pdf-container {
+  margin: 10px;
+  padding: 10px;
+  background-color: grey;
+}
+
+.form-container {
+  background-color: #3563b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* label {
+  display: block;
+} */
+
+input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 8px 150px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+button {
+  background-color: #07f757;
+  border-radius: 5px;
+  padding: 15px 50px;
+  color: #720e9e;
+  margin: 10px 80px; /* Add margin for both vertical and horizontal spacing */
+}
+
+.page-number {
+  display: flex;
+  justify-content: center;
+}

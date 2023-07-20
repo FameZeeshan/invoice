@@ -1,7 +1,7 @@
 // PDF.js
 import React, { useState } from "react";
 
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
 import pdfFile from "./sample.pdf";
 
 const PDF = () => {
@@ -26,21 +26,21 @@ const PDF = () => {
 
   return (
     <div>
-      <h2>PDF Component</h2>
-      <div>
-        <button onClick={handlePreviousPage}>Previous</button>
-        <button onClick={handleNextPage}>Next</button>
-      </div>
-      {/* Add any content or functionality for the PDF component */}
-      <div className="pdf">
-        <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
-          <Page pageNumber={pageNumber} />
-        </Document>
-      </div>
+      <div className="pdf-container">
+        <div className="button">
+          <button onClick={handlePreviousPage}>Previous</button>
+          <button onClick={handleNextPage}>Next</button>
+        </div>
+        <p className="page-number">
+          Page {pageNumber} of {numPages}
+        </p>
 
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
+        <div className="pdf">
+          <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
+            <Page pageNumber={pageNumber} />
+          </Document>
+        </div>
+      </div>
     </div>
   );
 };
